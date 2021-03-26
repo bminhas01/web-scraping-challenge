@@ -1,0 +1,17 @@
+    /* formatting for all td tags */
+    td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    /* formatting for all th tags */
+    th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+
+    /* formatting for even rows in table */
+    tr:nth-child(even)
+    {background-color: #d9dddd;
+    }
