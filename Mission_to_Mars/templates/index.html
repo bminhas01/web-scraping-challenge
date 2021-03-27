@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Reference style sheets -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,22 +12,26 @@
 </head>
 
 <body>
+  <!-- Set up Jumbotron with button to get new data -->
   <div class="container-fluid">
     <div class="jumbotron text-center py-3">
       <h1><strong>Mission to Mars</strong></h1><br>
       <p><a type="button" class="btn btn-info" href="/scrape" role="button">Get Data!</a></p>
     </div>
+    <!-- Create grid structure to hold latest news title and related information -->
     <div class = "row">
       <div class = "col-12">
         <h4><strong>Latest Mars News</strong></h4>
         <p><strong>{{information.news_title}}</strong> <br> {{information.news_p}}</p>
       </div>
     </div>
+    <!-- Create grid structure to hold Featured Mars Image -->
     <div class = "row">
       <div class = "col-12 col-md-7 pr-2">
         <h4><strong>Featured Image</strong></h4>
         <img src="{{information.featured_image_url}}" width = 100% alt="Featured Image">
       </div>
+      <!-- Create grid structure for Mars Facts table -->
       <div class = "col-12 col-md-5 pl-3">
         <h4><strong>Mars Facts</strong></h4>
         <table class = datatable>
@@ -77,10 +82,14 @@
         </table>
       </div>
     </div>
+    <br>
+    <hr style="height:1px;width: 75%;margin-bottom:0;border-width:0;color:gray;background-color:gray">
+    <!-- Create a grid structure using cards and insert the image
+    and image of each Mars hemisphere -->
     <div class = "row px-1 mx-1">
       <div class = 'col-12 text-center card-title'>
         <br>
-        <h4><strong>Mars Hemispheres</strong></h4>
+        <h4 class = "card-title"><strong>Mars Hemispheres</strong></h4>
       </div>
       <div class="col-6 card">
         <div class = 'card-body'>
