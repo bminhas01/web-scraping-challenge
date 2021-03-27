@@ -54,11 +54,10 @@ def scrape():
     info_df.rename(columns={0:'Attribute', 1: 'Value'}, inplace = True)
 
     # Generate a html table using the to_html method
-    info_html = info_df.to_html(index = False)
+    html_table = info_df.to_html(index = False)
 
-    # Save html code to new file (info_html)
-    with open('info.html', 'w', encoding='utf-8') as file:
-        file.write(info_html)
+    # Clean the html table by removing unwanted newlines
+    info_html = html_table.replace('\n', '')
 
     # URL of page to be scraped - USGS Astrogeology webpage
     url_hemispheres = 'https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
@@ -101,8 +100,6 @@ def scrape():
         hemisphere_info ['title'] = img_title
         hemisphere_info ['img_url'] = image_url
         hemisphere_image_urls.append(hemisphere_info)
-
-    print(hemisphere_image_urls)
 
     # Store data in a dictionary
     mars_data = {

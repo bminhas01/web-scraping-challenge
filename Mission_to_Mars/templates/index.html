@@ -32,7 +32,8 @@
         <img src="{{information.featured_image_url}}" width = 100% alt="Featured Image">
       </div>
       <!-- Create grid structure for Mars Facts table -->
-      <div class = "col-12 col-md-5 pl-3">
+      {{information.info_html|safe}}
+      <!-- <div class = "col-12 col-md-5 pl-3">
         <h4><strong>Mars Facts</strong></h4>
         <table class = datatable>
           <thead>
@@ -80,7 +81,7 @@
             </tr>
           </tbody>
         </table>
-      </div>
+      </div> -->
     </div>
     <br>
     <hr style="height:1px;width: 75%;margin-bottom:0;border-width:0;color:gray;background-color:gray">
